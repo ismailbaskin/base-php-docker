@@ -9,6 +9,7 @@ RUN apk add --no-cache --virtual .build-deps \
             pkgconf \
     && apk add --no-cache \
             postgresql-dev \
+            pcre-dev \
             curl \
             git \
     && yes 'no' | pecl install -f apcu-5.1.8 \
