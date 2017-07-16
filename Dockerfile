@@ -1,5 +1,10 @@
 FROM php:7-fpm-alpine
 
+MAINTAINER Ismail Baskin <ismailbaskin1@gmail.com>
+
+ENV COMPOSER_NO_INTERACTION 1
+ENV COMPOSER_ALLOW_SUPERUSER 1
+
 RUN apk add --no-cache --virtual .build-deps \
             autoconf \
             make \
