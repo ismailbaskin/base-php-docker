@@ -26,6 +26,9 @@ RUN apk add --no-cache --virtual .build-deps \
         echo 'opcache.max_accelerated_files=30000'; \
         echo 'realpath_cache_size=4096K'; \
         echo 'realpath_cache_ttl=1200'; \
+        echo 'display_errors=Off'; \
+        echo 'file_uploads=Off'; \
+        echo 'session.use_cookies=0'; \
     } | tee /usr/local/etc/php/conf.d/config.ini \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin --filename=composer \
     && composer global require hirak/prestissimo \
